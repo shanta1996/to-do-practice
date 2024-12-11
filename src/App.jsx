@@ -1,11 +1,11 @@
-import React from 'react'
-import Button from './components/Button'
+import Todo from './projects/todo/Todo'
 
 const App = () => {
-  return (
-    <div>
-      <Button/>
-    </div>
+    return (
+    <>
+      <Todo/>
+
+    </>
   )
 }
 
