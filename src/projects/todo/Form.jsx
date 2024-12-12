@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 
 const Form = ({ handle }) => {
-    const [addInput, setAddInput] = useState('')
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        handle(addInput)
-        setAddInput('')
-    }
     const handleInput = (value) => {
         setAddInput({id:value,content:value,checked:false})
     }
+
+    const [addInput, setAddInput] = useState({})
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        handle(addInput)
+        setAddInput({id:'',content:'',checked:''})
+    }
+   
     // console.log(addTask)
  
     return (
